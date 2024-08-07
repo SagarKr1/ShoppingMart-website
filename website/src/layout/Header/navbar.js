@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Box } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { Outlet ,Link} from "react-router-dom";
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -57,11 +57,11 @@ export default function TemporaryDrawer() {
             </Drawer>
 
             <Box sx={{ display: {sm:"flex",xs:"none"}, flexDirection: "row", justifyContent: "space-evenly" }}>
-                <Button>Home</Button>
-                <Button>Category</Button>
-                <Button>Product</Button>
-                <Button>About Us</Button>
-                <Button>Contact US</Button>
+                <Button><Link to="/" style={{textDecoration:"none",color:"black"}}>Home</Link></Button>
+                <Button><Link to="/category" style={{textDecoration:"none",color:"black"}}>Category</Link></Button>
+                <Button><Link to="/product" style={{textDecoration:"none",color:"black"}}>Product</Link></Button>
+                <Button><Link to="/about" style={{textDecoration:"none",color:"black"}}>About Us</Link></Button>
+                <Button><Link to="/contact" style={{textDecoration:"none",color:"black"}}>Contact Us</Link></Button>
             </Box>
             <Outlet />
         </div>
