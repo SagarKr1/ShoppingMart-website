@@ -10,6 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function TemporaryDrawer() {
     const [open, setOpen] = React.useState(false);
@@ -50,12 +51,12 @@ export default function TemporaryDrawer() {
 
     return (
         <div>
-            <Button sx={{display:{lg:"none",xs:"block"}}} onClick={toggleDrawer(true)}>Open drawer</Button>
+            <Button sx={{display:{sm:"none",xs:"block"}}} onClick={toggleDrawer(true)}><MenuIcon/></Button>
             <Drawer  open={open} onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
 
-            <Box sx={{ display: {lg:"flex",xs:"none"}, flexDirection: "row", justifyContent: "space-evenly" }}>
+            <Box sx={{ display: {sm:"flex",xs:"none"}, flexDirection: "row", justifyContent: "space-evenly" }}>
                 <Button>Home</Button>
                 <Button>Category</Button>
                 <Button>Product</Button>
@@ -66,24 +67,3 @@ export default function TemporaryDrawer() {
         </div>
     );
 }
-
-// export default function Navbar() {
-//     return (
-//         <>
-//             <div>
-//                 <Button onClick={toggleDrawer(true)}>Open drawer</Button>
-//                 <Drawer open={open} onClose={toggleDrawer(false)}>
-//                     {DrawerList}
-//                 </Drawer>
-//             </div>
-//             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
-//                 <Button>Home</Button>
-//                 <Button>Category</Button>
-//                 <Button>Product</Button>
-//                 <Button>About Us</Button>
-//                 <Button>Contact US</Button>
-//             </Box>
-//             <Outlet />
-//         </>
-//     )
-// }
