@@ -15,6 +15,7 @@ export default function SearchBar() {
 
     const HandleSearch = () => {
         console.log(value);
+        setValue('');
         navigate(`/s?key=${value}`);
     }
 
