@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { Box } from '@mui/material';
 
 export default function TrendingProduct() {
     return (
-        <div>TrendingProduct</div>
+        <Box>TrendingProduct</Box>
     )
 }

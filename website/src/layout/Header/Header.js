@@ -30,7 +30,6 @@ export default function Header() {
                         <Link to="/account" style={{color:'black'}}> <AccountCircleIcon /></Link>
                     </Box>
                 </Box>
-
             </Box>
 
             <Box sx={{ display: { lg: "none", xs: "flex" }, justifyContent: "center" }} >

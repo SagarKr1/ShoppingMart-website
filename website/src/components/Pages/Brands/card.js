@@ -1,5 +1,5 @@
 import { Box, Grid, Paper, Typography } from '@mui/material'
-import React from 'react'
+import React from 'react';
 
 export default function CardB(props) {
     return (
@@ -11,7 +11,9 @@ export default function CardB(props) {
                 justifyContent:"space-around"
             }}>
                 <Typography sx={{
-                    textAlign: "center"
+                    textAlign: "center",
+                    fontSize:25,
+                    textShadow:'2px 2px 4px rgba(0,0,0,0.5)'
                 }}>{props.brand.Brand}</Typography>
 
                 <Typography

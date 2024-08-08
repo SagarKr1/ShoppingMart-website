@@ -64,7 +64,10 @@ export default function BrandCard() {
                 justifyContent:"space-between",
                 marginBottom:4
             }}>
-                <Typography>Best Brands: we have</Typography>
+                <Typography sx={{
+                    fontSize:25,
+                    textShadow:'2px 2px 4px rgba(0,0,0,0.5)'
+                }}>Best Brands: we have</Typography>
                 <Button variant="contained" >View All</Button>
             </Box>
             <Grid
