@@ -64,7 +64,7 @@ export default function BrandCard() {
                 justifyContent:"space-between",
                 marginBottom:4
             }}>
-                <Typography>Brands: we have</Typography>
+                <Typography>Best Brands: we have</Typography>
                 <Button variant="contained" >View All</Button>
             </Box>
             <Grid
