@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Box } from "@mui/material";
-import { Outlet ,Link} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -22,18 +22,20 @@ export default function TemporaryDrawer() {
     const DrawerList = (
         <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
+                {[{ "name": "Home", "route": "/" }, { "name": "Category", "route": "/category" }, { "name": "Product", "route": "/product" }, { "name": "About Us", "route": "/about" }, { "name": "Contact Us", "route": "/contact" }].map((text, index) => (
+                    <ListItem key={index} disablePadding>
                         <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
+                            <Link to={text.route} style={{textDecoration:"none",color:"black"}}>
+                                {/* <ListItemIcon sx={{display:"inline"}}>
+                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                </ListItemIcon> */}
+                                <ListItemText primary={text.name}/>
+                            </Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
             </List>
-            <Divider />
+            {/* <Divider />
             <List>
                 {['All mail', 'Trash', 'Spam'].map((text, index) => (
                     <ListItem key={text} disablePadding>
@@ -45,23 +47,23 @@ export default function TemporaryDrawer() {
                         </ListItemButton>
                     </ListItem>
                 ))}
-            </List>
+            </List> */}
         </Box>
     );
 
     return (
         <div>
-            <Button sx={{display:{sm:"none",xs:"block"}}} onClick={toggleDrawer(true)}><MenuIcon/></Button>
-            <Drawer  open={open} onClose={toggleDrawer(false)}>
+            <Button sx={{ display: { sm: "none", xs: "block" } }} onClick={toggleDrawer(true)}><MenuIcon /></Button>
+            <Drawer open={open} onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
 
-            <Box sx={{ display: {sm:"flex",xs:"none"}, flexDirection: "row", justifyContent: "space-evenly" }}>
-                <Button><Link to="/" style={{textDecoration:"none",color:"black"}}>Home</Link></Button>
-                <Button><Link to="/category" style={{textDecoration:"none",color:"black"}}>Category</Link></Button>
-                <Button><Link to="/product" style={{textDecoration:"none",color:"black"}}>Product</Link></Button>
-                <Button><Link to="/about" style={{textDecoration:"none",color:"black"}}>About Us</Link></Button>
-                <Button><Link to="/contact" style={{textDecoration:"none",color:"black"}}>Contact Us</Link></Button>
+            <Box sx={{ display: { sm: "flex", xs: "none" }, flexDirection: "row", justifyContent: "space-evenly" }}>
+                <Button><Link to="/" style={{ textDecoration: "none", color: "black" }}>Home</Link></Button>
+                <Button><Link to="/category" style={{ textDecoration: "none", color: "black" }}>Category</Link></Button>
+                <Button><Link to="/product" style={{ textDecoration: "none", color: "black" }}>Product</Link></Button>
+                <Button><Link to="/about" style={{ textDecoration: "none", color: "black" }}>About Us</Link></Button>
+                <Button><Link to="/contact" style={{ textDecoration: "none", color: "black" }}>Contact Us</Link></Button>
             </Box>
             <Outlet />
         </div>
