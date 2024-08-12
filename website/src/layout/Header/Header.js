@@ -11,21 +11,21 @@ import Headroom from "react-headroom";
 
 export default function Header() {
     return (
-        <Box sx={{ bgcolor: "white"}}>
+        <Box sx={{ bgcolor: "white" }}>
             {/* Search Bar */}
             <Headroom>
                 <Box sx={{
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: { xs: "space-around", },
-                    alignItems:"center",
+                    alignItems: "center",
                     bgcolor: "whitesmoke",
-                    paddingBottom:1
+                    paddingBottom: 1
                 }}>
                     <Box>
                         <Logo />
                     </Box>
-                    <Box sx={{ display: { lg: "flex", xs: "none" },marginTop:1 }} >
+                    <Box sx={{ display: { lg: "flex", xs: "none" }, marginTop: 1 }} >
                         <SearchBar />
                     </Box>
 
@@ -42,11 +42,18 @@ export default function Header() {
                         </Box>
                     </Box>
                 </Box>
-            </Headroom>
 
-            <Box sx={{ display: { lg: "none", xs: "flex" }, justifyContent: "center" }} >
-                <SearchBar />
-            </Box>
+                <Box sx={{
+                    display: { lg: "none", xs: "flex" },
+                    justifyContent: "center",
+                    bgcolor: "whitesmoke",
+                    paddingBottom:1
+                }}
+                >
+                    <SearchBar />
+                </Box>
+
+            </Headroom>
 
             {/* Menu */}
             <Navbar />
