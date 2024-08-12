@@ -4,13 +4,15 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 export default function Card(props) {
     return (
-        <Grid key={props.category.id} item xs={4} sm={2} >
+        // <Grid key={props.category.id} item xs={4} sm={2} >
             <Paper sx={{
                 display:"flex",
                 flexDirection:"column",
                 height:{xs:"80px",sm:"100px",md:"150px"},
                 alignItems:"center",
-                justifyContent:"space-around"
+                justifyContent:"space-around",
+                border:"1px solid black",
+                marginRight:3
             }}>
                 <ShoppingBagIcon/>
                 <Typography sx={{
@@ -20,6 +22,6 @@ export default function Card(props) {
                     {props.category.category}
                 </Typography>
             </Paper>
-        </Grid>
+        // </Grid>
     )
 }

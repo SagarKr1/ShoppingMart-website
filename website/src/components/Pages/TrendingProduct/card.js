@@ -45,19 +45,22 @@ export default function Cards(props) {
         console.log("Add To Buy");
     }
     return (
-        <Grid item key={props.product.id} xs={5} md={2}>
-            {console.log(props.product.image.images)}
-            <Card sx={{}}>
+        // <Grid item key={props.product.id} xs={5} md={2}>
+        //     {console.log(props.product.image.images)}
+            <Card sx={{
+                border:"1px solid black",
+                marginRight:3
+            }}>
                 <CardMedia
                     sx={{
-                        height: { sm: "250px", xs: "125px" },
-                            backgroundImage: `url(${props.product.image.images})`,
+                        height: { xs:"250px", sm: "250px", xs: "125px" },
+                            // backgroundImage: `url(${props.product.image.images})`,
                             position:"relative",
                             backgroundSize: "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center"
                     }}
-                    // image={props.product.image.images}
+                    image={props.product.image.images}
                     title={props.product.name}
                 />
                 <CardContent>
@@ -88,6 +91,6 @@ export default function Cards(props) {
                     <Button size="small" variant='contained' onClick={handlerBuy}>Buy</Button>
                 </CardActions>
             </Card>
-        </Grid>
+        // </Grid>
     )
 }
