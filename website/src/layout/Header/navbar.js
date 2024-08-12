@@ -65,7 +65,6 @@ export default function TemporaryDrawer() {
                 <Button><Link to="/about" style={{ textDecoration: "none", color: "black" }}>About Us</Link></Button>
                 <Button><Link to="/contact" style={{ textDecoration: "none", color: "black" }}>Contact Us</Link></Button>
             </Box>
-            <Outlet />
         </div>
     );
 }
