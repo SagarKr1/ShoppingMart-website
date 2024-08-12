@@ -51,7 +51,7 @@ export default function CategoryCard() {
                     {
                         categoryList.map((category) => {
                             return (
-                                <Card category={category} />
+                                <Card key={category.id} category={category} />
                             )
                         })
                     }

@@ -74,6 +74,7 @@ export default function BrandCard() {
                 container
                 gap={2}
                 justifyContent="center"
+                sx={{}}
             >
                 {
                     brandList.map((brand, index) => {
