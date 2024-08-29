@@ -23,12 +23,13 @@ export default function Offer() {
                         backgroundPosition: "center",
                     }}>
                         <Box sx={{
-                            
+
                         }}>
                             <Typography sx={{
                                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
                                 textAlign: "center",
-                                margin:"25%"
+                                color:"white",
+                                margin: "25%"
                             }}>
                                 Get 20% Discount<br />
                                 In your first shopping
@@ -42,14 +43,14 @@ export default function Offer() {
                         sx={{
                             height: { sm: "250px", xs: "125px" },
                             backgroundImage: `url(${img2})`,
-                           position: "relative",
+                            position: "relative",
                             backgroundSize: "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center"
                         }}
                     >
                         <Box>
-                            <Typography sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)',textAlign: "center", marginTop: "25%" }}>
+                            <Typography sx={{color:"white", backgroundColor: 'rgba(0, 0, 0, 0.5)', textAlign: "center", marginTop: "25%" }}>
                                 Get 20% Discount<br />
                                 In your first shopping
                             </Typography>
@@ -62,14 +63,14 @@ export default function Offer() {
                         sx={{
                             height: { sm: "250px", xs: "125px" },
                             backgroundImage: `url(${img3})`,
-                            position:"relative",
+                            position: "relative",
                             backgroundSize: "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center"
                         }}
                     >
                         <Box>
-                            <Typography sx={{ backgroundColor: 'rgba(0, 0, 0, 0.5)',textAlign: "center", marginTop: "25%" }}>
+                            <Typography sx={{ color:"white", backgroundColor: 'rgba(0, 0, 0, 0.5)', textAlign: "center", marginTop: "25%" }}>
                                 Get 20% Discount<br />
                                 In your first shopping
                             </Typography>
